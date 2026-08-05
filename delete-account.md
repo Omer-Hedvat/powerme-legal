@@ -23,6 +23,8 @@ For your security, you may be asked to sign in again before the deletion is carr
 
 Deletion is **immediate and irreversible**.
 
+> Want to remove only *some* of your data and keep your account? See [Delete Your Data](delete-data).
+
 ---
 
 ## 2. Request Deletion by Email
