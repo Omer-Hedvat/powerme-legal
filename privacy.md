@@ -7,9 +7,9 @@ permalink: /privacy
 # PowerME — Privacy Policy
 
 **Effective date:** 2026-04-27  
-**Last updated:** 2026-09-20
+**Last updated:** 2026-10-01
 
-This revision expands section 2 to describe how the app's AI features send your data to Google's Gemini API, and corrects an earlier statement that workout photo scanning happened on-device. Most of these features were added after the previous version of this policy was written.
+This revision corrects section 2.2 to list all data synced to Firebase Firestore, corrects section 2.7 to say which Health Connect data is synced, and updates section 2.5 to match what the AI features send.
 
 ---
 
@@ -32,10 +32,15 @@ We do not store your password — Firebase Auth handles credential storage and a
 ### 2.2 Workout and Profile Data (Firestore)
 
 If you are signed in, the following data is synced to Firebase Firestore to enable cross-device access and backup:
-- **Workouts:** exercises performed, sets, reps, weight, duration, RPE, and notes.
-- **Routines and workout templates.**
-- **Profile data:** date of birth, height, weight, body fat percentage, gender.
-- **App settings:** workout style preference, unit system, timer configuration.
+- **Profile data:** email address, name, birth year, height, weight, body fat percentage, gender, occupation type, average sleep hours, training goals, experience level, training days per week, preferred training days, and your free-text goal notes. If you connect Health Connect, the height, weight and body fat percentage values the app reads from it update these profile fields.
+- **Workouts:** routine name, start and end time, duration, total volume and notes. For each set: the exercise name and equipment, set type, weight, reps, RPE, distance, time, rest duration, set notes, superset and block grouping, and start and end time. For timed or interval blocks (for example AMRAP, EMOM or Tabata): the block settings, rounds, finish times, RPE and block notes.
+- **Routines and workout templates:** the exercises and their order, target sets, reps, weights, rest times and distances, sticky notes, progression settings, and block structure.
+- **Custom exercises you create:** name, muscle group, equipment, exercise type, and movement classification (joints and movement pattern).
+- **Body measurement history:** a dated log of the weight, body fat percentage and height values you enter. If you connect Health Connect, the weight, height and VO₂ Max values the app reads from it are also added to this log.
+- **Routine scores:** the results of routine scoring and the inputs saved with them (see §2.5).
+- **Settings and preferences:** available plates, rest-timer sound and vibration, theme, unit system, daily step target, keep-screen-on, RPE mode, timed-set setup time, language, timer sound and workout style.
+
+Your injury records themselves are stored only on your device.
 
 Signed-out users store all data locally on-device only (Room database). No data leaves the device without an account.
 
@@ -49,20 +54,20 @@ We collect anonymised usage events to understand how the app is used. Examples: 
 
 ### 2.5 AI Features (Google Gemini API)
 
-Several features in PowerME work by sending data to Google's Gemini API in the cloud. **When you use these features, health and fitness information about you, including your injuries, body measurements and workout performance, is sent to Google, a third party, so the feature can produce its result.** The lists below say what each feature sends and whether it runs only when you ask for it or on its own.
+Several features in PowerME work by sending data to Google's Gemini API in the cloud. **When you use these features, health and fitness information about you, including your injuries, your age, gender and self-reported sleep hours, and your workout performance, is sent to Google, a third party, so the feature can produce its result.** The lists below say what each feature sends and whether it runs only when you ask for it or on its own.
 
 **Features that run only when you tap a button:**
 
 - **Workout parsing.** When you type or dictate a workout and ask the app to read it, the text you entered is sent. If you ask the app to generate a workout in conversation, the free-text training-focus note from your profile is sent as well.
 - **Translation.** This is part of workout parsing. If the text you entered is not in English, the full text is first sent to be translated. You do not choose this separately; it happens whenever you parse non-English text.
 - **Workout photo scanning.** The photograph you take of a workout is sent as an image (see 2.6).
-- **Routine scoring.** When you ask the app to score routines, it sends your age, gender, bodyweight, self-reported average sleep hours, experience level and training days per week; your goals and free-text training note; the full structure of the routines being scored; your recent adherence percentages; and the reasoning text and severity score that the injury classification feature (below) produced about your injuries. The app asks for your consent once before the first use of this feature.
+- **Routine scoring.** When you ask the app to score routines, it sends your age, gender, self-reported average sleep hours, experience level and training days per week; your goals and free-text training note; the full structure of the routines being scored; your recent adherence percentages; and the reasoning text and severity score that the injury classification feature (below) produced about your injuries. The app asks for your consent once before the first use of this feature.
 
 **Features that run automatically, without a button press:**
 
 - **Injury classification.** When you save an injury, its free-text description, the joints affected and the severity are sent, together with the names of candidate exercises, so the app can mark exercises as safe or to be avoided. **This happens at every severity, including mild.** It runs in the background after you save.
 - **Performance report.** After a workout, your goals and, for each exercise, planned and actual reps, planned and actual weight, RPE, time under tension and a computed verdict are sent so the report can be written in plain language.
-- **Post-workout insight.** After an interval or metcon-style block (for example AMRAP, EMOM or Tabata), the workout type, duration, per-round times, your RPE ratings, the names of exercises from earlier blocks and a pacing score are sent. This also includes a yes/no signal for whether a heart-rate record exists for that date, read from Health Connect. No heart-rate values are sent (see 2.7).
+- **Post-workout insight.** After an interval or metcon-style block (for example AMRAP, EMOM or Tabata), the workout type, duration, per-round times, your RPE ratings, the names of exercises from earlier blocks and a pacing score are sent. No Health Connect data is included (see 2.7).
 
 When you enter a Gemini API key, the app also sends the fixed word "hi" to check that the key works. No personal data is included in that check.
 
@@ -70,6 +75,8 @@ When you enter a Gemini API key, the app also sends the fixed word "hi" to check
 
 - **Exercise classifications produced from your injuries.** These stay on your device and are not uploaded.
 - **Routine scores.** These are saved together with the inputs used to produce them — your goals, the names and weekly frequency of the routines scored, and the lists of exercises flagged because of your injuries — and sync across your devices through Firebase Firestore.
+
+Because PowerME uses the Gemini API on Google's free tier, Google's [Gemini API Additional Terms](https://ai.google.dev/gemini-api/terms) allow Google to use what is sent to Gemini, and the responses, to improve its products and machine learning technologies, and human reviewers may read and annotate it (Google says it first disconnects this data from your Google Account, API key and project).
 
 Google's data handling is governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
@@ -100,7 +107,7 @@ PowerME reads the following health data types from Android Health Connect, with 
 | Respiratory Rate | Health trend charts |
 | Exercise Session | Read + Write — records workouts to Health Connect |
 
-**Health Connect data is not synced to our servers or to Firestore, and no Health Connect readings or values are sent to Gemini or any other third party.** One AI feature, the post-workout insight (see 2.5), sends a yes/no signal to Google's Gemini API indicating whether a heart-rate record exists for the date of your workout. It does not send the heart-rate reading itself or any other Health Connect value. Data stored in Health Connect remains under your control via the Health Connect app.
+**Some Health Connect data is synced to Firestore.** If you are signed in, the weight, height and body fat percentage values the app reads from Health Connect update your profile, and the weight, height and VO₂ Max values it reads are added to your body measurement history. Both are synced to Firebase Firestore with the rest of your account data (see 2.2). The other Health Connect data types in the table above stay on your device and are not synced to our servers or to Firestore. Apart from this sync, no Health Connect data leaves your device; none of it is sent to Google's Gemini API. Deleting data in the Health Connect app does not remove values already synced to your PowerME account; deleting your account removes them (see 5). Data stored in Health Connect remains under your control via the Health Connect app.
 
 ---
 
@@ -112,7 +119,7 @@ PowerME reads the following health data types from Android Health Connect, with 
 - To diagnose crashes and fix bugs.
 - To understand aggregate usage patterns and improve the app.
 
-We do not sell or rent your personal data. We share it with third parties only as described in this policy: with Google's Firebase services for sign-in, sync, crash reporting and analytics, and with Google's Gemini API for the AI features described in section 2.5, which includes health and fitness information such as your injuries, body measurements and workout performance.
+We do not sell or rent your personal data. We share it with third parties only as described in this policy: with Google's Firebase services for sign-in, sync, crash reporting and analytics, and with Google's Gemini API for the AI features described in section 2.5, which includes health and fitness information such as your injuries, age, sleep hours and workout performance.
 
 ---
 
