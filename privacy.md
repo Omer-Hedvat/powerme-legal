@@ -7,15 +7,15 @@ permalink: /privacy
 # PowerME — Privacy Policy
 
 **Effective date:** 2026-04-27  
-**Last updated:** 2026-10-15
+**Last updated:** 2026-11-11
 
-This revision corrects section 2.2 to list all the data synced to Firebase Firestore, corrects section 2.7 to say which Health Connect data is synced, updates section 2.5 to match what the AI features send, and adds to section 2.5 how Google may use the data sent to the Gemini API.
+This revision adds to section 2.1 that account emails (address verification and password reset) are sent through Resend, adds Resend to sections 3, 4 and 6, and changes our contact address to support@powermeapp.com.
 
 ---
 
 ## 1. Who We Are
 
-PowerME is a fitness and workout tracking application developed by Omer Hedvat ("we", "us", "our"). For questions or concerns, contact us at **powerme.support@gmail.com**.
+PowerME is a fitness and workout tracking application developed by Omer Hedvat ("we", "us", "our"). For questions or concerns, contact us at **support@powermeapp.com**.
 
 ---
 
@@ -28,6 +28,10 @@ When you sign in, we collect:
 - **Google Sign-In:** your Google email address, display name and profile photo URL, provided by Google's Credential Manager.
 
 We do not store your password. Firebase Auth handles credential storage and authentication.
+
+**Account emails (Resend).** When you sign up with an email and password, or ask to reset your password, we send the verification or password-reset email through Resend, an email delivery service. Resend receives your email address and the content of the email, which includes a one-time link. If Resend can't be reached, Firebase Auth sends the email instead.
+
+To prevent abuse, we limit how many of these emails can be requested. The counters we keep for this store only a hashed (one-way scrambled) form of your email address and of the requesting IP address, never the address itself, and are deleted automatically, usually within two days.
 
 ### 2.2 Workout and Profile Data (Firebase Firestore)
 
@@ -122,7 +126,7 @@ Deleting data in the Health Connect app does not remove values already synced to
 - To diagnose crashes and fix bugs.
 - To understand aggregate usage patterns and improve the app.
 
-We do not sell or rent your personal data. We share it with third parties only as described in this policy: with Google's Firebase services for sign-in, sync, crash reporting and analytics, and with Google's Gemini API for the AI features described in section 2.5, which includes health and fitness information such as your injuries, age, sleep hours and workout performance.
+We do not sell or rent your personal data. We share it with third parties only as described in this policy: with Google's Firebase services for sign-in, sync, crash reporting and analytics, with Resend to send account emails (address verification and password reset), and with Google's Gemini API for the AI features described in section 2.5, which includes health and fitness information such as your injuries, age, sleep hours and workout performance.
 
 ---
 
@@ -130,6 +134,7 @@ We do not sell or rent your personal data. We share it with third parties only a
 
 - **Firestore data** is retained until you delete your account.
 - **Health Connect data** is stored on your device by the Health Connect platform. Uninstalling PowerME does not delete Health Connect data; use the Health Connect app to manage or delete it.
+- **Account-email rate-limit counters** hold only hashed values and are deleted automatically, usually within two days. Resend keeps records of the emails it delivers under its own retention policy.
 - **Crashlytics data** is retained for 90 days per Firebase's standard policy.
 - **Analytics data** is aggregated and anonymised; individual events expire per Firebase's standard retention policy.
 
@@ -155,13 +160,14 @@ Deletion is irreversible and immediate. Health Connect data is unaffected and mu
 | Firebase Crashlytics | Crash reporting | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Firebase Analytics | Usage analytics | [Google Privacy Policy](https://policies.google.com/privacy) |
 | Google Gemini API | AI features: workout parsing and translation, photo scanning, injury classification, performance reports, post-workout insights, routine scoring | [Google Privacy Policy](https://policies.google.com/privacy) |
+| Resend | Sending account emails: address verification and password reset | [Resend Privacy Policy](https://resend.com/legal/privacy-policy) |
 | Android Health Connect | Health data platform | [Google Privacy Policy](https://policies.google.com/privacy) |
 
 ---
 
 ## 7. Children's Privacy
 
-PowerME is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us at powerme.support@gmail.com.
+PowerME is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us at support@powermeapp.com.
 
 ---
 
@@ -179,4 +185,4 @@ We may update this policy from time to time. The "Last updated" date at the top 
 
 ## 10. Contact
 
-Questions about this privacy policy? Email us at **powerme.support@gmail.com**.
+Questions about this privacy policy? Email us at **support@powermeapp.com**.

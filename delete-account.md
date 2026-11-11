@@ -6,7 +6,7 @@ permalink: /delete-account
 
 # PowerME — Delete Your Account and Data
 
-**Last updated:** 2026-08-05
+**Last updated:** 2026-11-11
 
 ---
 
@@ -31,7 +31,7 @@ Deletion is **immediate and irreversible**.
 
 If you cannot access the app — for example, you have lost access to your sign-in email — you can request deletion by contacting us.
 
-Email **powerme.support@gmail.com** from the email address registered to your PowerME account, with the subject line **"Delete my account"**.
+Email **support@powermeapp.com** from the email address registered to your PowerME account, with the subject line **"Delete my account"**.
 
 We will verify that the request comes from the account owner and complete the deletion within **30 days** of the verified request.
 
@@ -63,6 +63,6 @@ Data held on your device is also wiped when you delete your account or sign out.
 
 ## 5. Questions
 
-Contact **powerme.support@gmail.com**.
+Contact **support@powermeapp.com**.
 
 See also our [Privacy Policy](privacy) and [Terms of Service](terms).

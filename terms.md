@@ -7,7 +7,7 @@ permalink: /terms
 # PowerME — Terms of Service
 
 **Effective date:** 2026-04-27  
-**Last updated:** 2026-04-27
+**Last updated:** 2026-11-11
 
 ---
 
@@ -91,4 +91,4 @@ These Terms are governed by the laws of the **State of Israel**, without regard 
 
 ## 12. Contact
 
-Questions about these Terms? Email us at **powerme.support@gmail.com**.
+Questions about these Terms? Email us at **support@powermeapp.com**.

@@ -8,8 +8,8 @@ permalink: /delete-data
 
 **App:** PowerME (Android)
 **Developer:** Omer Hedvat
-**Contact:** powerme.support@gmail.com
-**Last updated:** 2026-08-05
+**Contact:** support@powermeapp.com
+**Last updated:** 2026-11-11
 
 This page explains how to delete your data in **PowerME** without deleting your account. If you want to delete your account entirely, see [Delete Your Account](delete-account).
 
@@ -35,7 +35,7 @@ Deleting a workout removes all of its sets. To remove anything not listed above,
 
 To have an entire category of data removed at once — for example *all* health and injury history, or *all* workout history — email us and say what you want deleted.
 
-**Email:** **powerme.support@gmail.com**
+**Email:** **support@powermeapp.com**
 **Subject:** "Delete my data"
 **Include:** the email address registered to your PowerME account, and which categories you want removed.
 
@@ -73,4 +73,4 @@ To remove your account and all associated data in one step, see [Delete Your Acc
 
 ## Questions
 
-Contact **powerme.support@gmail.com**. See also our [Privacy Policy](privacy) and [Terms of Service](terms).
+Contact **support@powermeapp.com**. See also our [Privacy Policy](privacy) and [Terms of Service](terms).
